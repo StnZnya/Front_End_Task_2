@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>ButtonOfBut</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20%;
+    }
+
+    .modal {
+      background-color: #333;
+      color: white;
+      border: 2px solid #ccc;
+      width: 300px;
+      height: 200px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+
+    .modal-content {
+      padding: 20px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="openModalButton">Відкрити</button>
+
+  <div class="modal">
+    <div class="modal-content">
+      <button class="modal-close">Close</button>
+      <h2>Модальне вікно</h2>
+      <p>Це приклад модального вікна.</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var openButton = document.getElementById("openModalButton");
+      var modal = document.querySelector(".modal");
+      var closeButton = document.querySelector(".modal-close");
+
+      openButton.addEventListener("click", function() {
+        modal.style.display = "block";
+      });
+
+      closeButton.addEventListener("click", function() {
+        modal.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>
